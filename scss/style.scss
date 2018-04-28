@@ -3,3 +3,31 @@
 body {
 
 }
+
+.header {
+	background-color: #ddd;
+	padding: 25px;
+	display: flex;
+	justify-content: space-between;
+
+	& img {
+		border: 1px solid #eee;
+
+	}
+
+	&__title {
+
+	}
+
+}
+
+
+.info {
+
+
+}
+
+
+.number {
+
+}
