@@ -1,8 +1,7 @@
 @import "variables.scss";
 
 .splash {
-	background: #2ad39b;
-	background: linear-gradient(to right, #2ad39b 0%,#aae238 100%);
+	@include grad-reverse;
 	height: 100vh;
 	overflow: hidden;
 
@@ -10,7 +9,7 @@
 	&__circles {
 		animation: splash-up 2s 1;
 		animation-fill-mode: forwards;
-		animation-delay: 1s;
+		animation-delay: .5s;
 		width: 86vw;
 		height: 86vw;
 		top: 50%;
@@ -54,20 +53,6 @@
 		transform: translate(-50%, -50%);
 
 	}
-
-
 }
-
-@keyframes splash-up {
-	0% {
-		transform: translate(-50%, -50%);
-	}
-
-	100% {
-		transform: translate(-50%, -110%);
-
-	}
-}
-
 
 

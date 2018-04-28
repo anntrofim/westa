@@ -1,0 +1,68 @@
+@import "variables.scss";
+
+.account {
+	// animation: appearance 2s 1;
+	// animation-fill-mode: forwards;
+	// animation-delay: 10s;
+	opacity: 0;
+	background-color: #f4f6f6;
+	height: 100vh;
+	overflow: hidden;
+
+	&__info {
+
+	}
+
+	&__card {
+
+		padding: 8% 4%;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__title {
+		font-size: 1.3em;
+		margin: 0;
+	}
+
+	&__cnumber {
+		color: #8fa3aa;
+		font-size: .5em;
+		font-weight: normal;
+	}
+
+	&__btn {
+		@include btn;
+
+		& img {
+			width: 40%;
+		}
+
+		&--small {
+			// line-height: 2em;
+			padding: 15px 5px;
+		}
+		&--big {
+			background-color: #fff;
+			width: 50%;
+			padding: 20px 0;
+			color: #8fa3aa;
+
+			&:hover,
+			&:active {
+				color: #fff;
+				@include grad;
+			}
+		}
+	}
+
+	&__slider {
+
+	}
+
+	&__spendings {
+
+	}
+}
+
+

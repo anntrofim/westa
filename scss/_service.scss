@@ -1,0 +1,41 @@
+@import "variables.scss";
+
+.service {
+	background-color:#fff;
+	padding: 4% 5%;
+	margin: 5%;
+	display: flex;
+	justify-content: space-between;
+
+	&__title {
+		font-size: 1.3em;
+		margin: 0;
+	}
+
+	&__info {
+		color: #8fa3aa;
+		font-size: .5em;
+		font-weight: normal;
+	}
+
+	&__price {
+		font-size: .8em;
+
+		&:after {
+			content: "$";
+		}
+
+		&--expense{
+			color: #f66e39;
+			&:before {
+				content: "-";
+			}
+		}
+		&--income{
+			color: #40d58b;
+			&:before {
+				content: "+";
+			}
+		}
+	}
+}

@@ -1,24 +1,18 @@
 @import "variables.scss";
-@import "_transfer.scss";
+@import "_login.scss";
 @import "_splash.scss";
 @import "_pin.scss";
+@import "_header.scss";
+@import "_account.scss";
+@import "_service.scss";
 
 body {
-
+	font-family: 'ProximaNova', Arial, sans-serif;
 }
 
 * {
 	box-sizing: border-box;
-
 }
 
 
-@keyframes disappear{
-	0% {}
-	100% {
-		opacity: 0;
-	}
-	// 100% {
-	// 	display: none;
-	// }
-}
+

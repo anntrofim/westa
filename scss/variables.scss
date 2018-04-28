@@ -1,21 +1,64 @@
+// ---------------> FONTS
 
+@font-face {
+	font-family: 'ProximaNova';
+	src: url(../fonts/proximanova-regular.otf);
+	font-weight: normal;
+}
 
-// @font-face {
-// 	font-family: 'Aleo';
-// 	src: url(../fonts/AleoRegular.otf);
-// 	font-weight: normal;
-// }
+@font-face {
+	font-family: 'ProximaNova';
+	src: url(../fonts/proximanova-bold.otf);
+	font-weight: bold;
+}
+
+// ---------------> KEYFRAMES
+
+@keyframes splash-up {
+	0% {
+		transform: translate(-50%, -50%);
+	}
+	100% {
+		transform: translate(-50%, -110%);
+	}
+}
+
+@keyframes appearance {
+	0%{}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes disappear {
+	0%{}
+	100% {
+		opacity: 0;
+	}
+}
+
+// ---------------> MIXINS
+
+@mixin grad {
+	background: #2ad39b;
+	background: linear-gradient(to right, #aae238 0%,#2ad39b 100%);
+}
+
+@mixin grad-reverse {
+	background: #2ad39b;
+	background: linear-gradient(to right, #2ad39b 0%,#aae238 100%);
+}
 
 @mixin transition {
 	transition: all .3s ease;
 }
 
 @mixin btn {
-
 	@include transition;
+	background-color: transparent;
+	border: none;
 
 	&:hover {
-
 		@include transition;
 	}
 	&:focus {
@@ -23,15 +66,5 @@
 	}
 	&:active {
 
-	}
-}
-
-@mixin ref {
-	text-decoration: none;
-	@include transition;
-
-	&:hover {
-		text-decoration: none;
-		@include transition;
 	}
 }

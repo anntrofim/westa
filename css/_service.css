@@ -1,0 +1,62 @@
+@font-face {
+  font-family: 'ProximaNova';
+  src: url(../fonts/proximanova-regular.otf);
+  font-weight: normal; }
+
+@font-face {
+  font-family: 'ProximaNova';
+  src: url(../fonts/proximanova-bold.otf);
+  font-weight: bold; }
+
+@-webkit-keyframes splash-up {
+  0% {
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+  100% {
+    -webkit-transform: translate(-50%, -110%);
+    transform: translate(-50%, -110%); } }
+
+@keyframes splash-up {
+  0% {
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+  100% {
+    -webkit-transform: translate(-50%, -110%);
+    transform: translate(-50%, -110%); } }
+
+@-webkit-keyframes appearance {
+  0% { }
+  100% {
+    opacity: 1; } }
+
+@keyframes appearance {
+  0% { }
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes disappear {
+  0% { }
+  100% {
+    opacity: 0; } }
+
+@keyframes disappear {
+  0% { }
+  100% {
+    opacity: 0; } }
+
+.service__info {
+  color: #8fa3aa;
+  font-size: 16px; }
+
+.service__price:after {
+  content: "$"; }
+
+.service__price--expense {
+  color: #f66e39; }
+  .service__price--expense:before {
+    content: "-"; }
+
+.service__price--income {
+  color: #40d58b; }
+  .service__price--income:before {
+    content: "+"; }

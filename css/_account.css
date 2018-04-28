@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'ProximaNova';
+  src: url(../fonts/proximanova-regular.otf);
+  font-weight: normal; }
+
+@font-face {
+  font-family: 'ProximaNova';
+  src: url(../fonts/proximanova-bold.otf);
+  font-weight: bold; }
+
+.account {
+  background-color: #f4f6f6; }

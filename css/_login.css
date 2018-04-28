@@ -1,0 +1,12 @@
+.login {
+  display: none; }
+
+@-webkit-keyframes disappear {
+  0% { }
+  100% {
+    opacity: 0; } }
+
+@keyframes disappear {
+  0% { }
+  100% {
+    opacity: 0; } }

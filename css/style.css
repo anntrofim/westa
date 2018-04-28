@@ -1,24 +1,109 @@
-.header {
-  background-color: #ddd;
-  padding: 25px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between; }
-  .header img {
-    border: 1px solid #eee; }
+@font-face {
+  font-family: 'ProximaNova';
+  src: url(../fonts/proximanova-regular.otf);
+  font-weight: normal; }
 
-.main {
-  padding: 0; }
+@font-face {
+  font-family: 'ProximaNova';
+  src: url(../fonts/proximanova-bold.otf);
+  font-weight: bold; }
 
-.info {
-  background: #aae238;
-  background: -webkit-gradient(linear, left top, right top, from(#aae238), to(#2ad39b));
-  background: -webkit-linear-gradient(left, #aae238 0%, #2ad39b 100%);
-  background: -o-linear-gradient(left, #aae238 0%, #2ad39b 100%);
-  background: linear-gradient(to right, #aae238 0%, #2ad39b 100%); }
+@-webkit-keyframes splash-up {
+  0% {
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+  100% {
+    -webkit-transform: translate(-50%, -110%);
+    transform: translate(-50%, -110%); } }
+
+@keyframes splash-up {
+  0% {
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+  100% {
+    -webkit-transform: translate(-50%, -110%);
+    transform: translate(-50%, -110%); } }
+
+@-webkit-keyframes appearance {
+  0% { }
+  100% {
+    opacity: 1; } }
+
+@keyframes appearance {
+  0% { }
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes disappear {
+  0% { }
+  100% {
+    opacity: 0; } }
+
+@keyframes disappear {
+  0% { }
+  100% {
+    opacity: 0; } }
+
+@font-face {
+  font-family: 'ProximaNova';
+  src: url(../fonts/proximanova-regular.otf);
+  font-weight: normal; }
+
+@font-face {
+  font-family: 'ProximaNova';
+  src: url(../fonts/proximanova-bold.otf);
+  font-weight: bold; }
+
+@keyframes splash-up {
+  0% {
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+  100% {
+    -webkit-transform: translate(-50%, -110%);
+    transform: translate(-50%, -110%); } }
+
+@keyframes appearance {
+  0% { }
+  100% {
+    opacity: 1; } }
+
+@keyframes disappear {
+  0% { }
+  100% {
+    opacity: 0; } }
+
+.login {
+  position: absolute;
+  width: 100vw;
+  z-index: 2; }
+
+@font-face {
+  font-family: 'ProximaNova';
+  src: url(../fonts/proximanova-regular.otf);
+  font-weight: normal; }
+
+@font-face {
+  font-family: 'ProximaNova';
+  src: url(../fonts/proximanova-bold.otf);
+  font-weight: bold; }
+
+@keyframes splash-up {
+  0% {
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+  100% {
+    -webkit-transform: translate(-50%, -110%);
+    transform: translate(-50%, -110%); } }
+
+@keyframes appearance {
+  0% { }
+  100% {
+    opacity: 1; } }
+
+@keyframes disappear {
+  0% { }
+  100% {
+    opacity: 0; } }
 
 .splash {
   background: #2ad39b;
@@ -33,8 +118,8 @@
     animation: splash-up 2s 1;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
-    -webkit-animation-delay: 1s;
-    animation-delay: 1s;
+    -webkit-animation-delay: .5s;
+    animation-delay: .5s;
     width: 86vw;
     height: 86vw;
     top: 50%;
@@ -81,13 +166,15 @@
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%); }
 
-@-webkit-keyframes splash-up {
-  0% {
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%); }
-  100% {
-    -webkit-transform: translate(-50%, -110%);
-    transform: translate(-50%, -110%); } }
+@font-face {
+  font-family: 'ProximaNova';
+  src: url(../fonts/proximanova-regular.otf);
+  font-weight: normal; }
+
+@font-face {
+  font-family: 'ProximaNova';
+  src: url(../fonts/proximanova-bold.otf);
+  font-weight: bold; }
 
 @keyframes splash-up {
   0% {
@@ -97,17 +184,27 @@
     -webkit-transform: translate(-50%, -110%);
     transform: translate(-50%, -110%); } }
 
+@keyframes appearance {
+  0% { }
+  100% {
+    opacity: 1; } }
+
+@keyframes disappear {
+  0% { }
+  100% {
+    opacity: 0; } }
+
 .pin {
-  height: 0;
-  position: relative;
-  color: #fff;
-  opacity: 0;
   -webkit-animation: appearance 2s 1;
   animation: appearance 2s 1;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
   -webkit-animation-delay: 2s;
-  animation-delay: 2s; }
+  animation-delay: 2s;
+  height: 0;
+  position: relative;
+  color: #fff;
+  opacity: 0; }
   .pin__inner {
     position: absolute;
     bottom: 0;
@@ -130,13 +227,32 @@
         height: 100vh; } }
   .pin__txt {
     margin: 0; }
+  .pin__inputs {
+    padding: 0 15%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around; }
   .pin__inp {
-    width: 18rem; }
+    width: 20%;
+    background-color: transparent;
+    border: none;
+    border-radius: 8px;
+    font-size: 2rem;
+    line-height: 3rem;
+    text-align: center;
+    -webkit-box-shadow: inset 0px 0px 15px 0px rgba(98, 103, 112, 0.2);
+    box-shadow: inset 0px 0px 15px 0px rgba(98, 103, 112, 0.2); }
+    .pin__inp:focus {
+      outline: none; }
   .pin__btn {
     -webkit-transition: all .3s ease;
     -o-transition: all .3s ease;
     transition: all .3s ease;
     background-color: transparent;
+    border: none;
+    font-size: 18px;
     border-radius: 10px;
     border: 1px solid;
     padding: 20px 70px;
@@ -149,26 +265,205 @@
     .pin__btn:focus {
       outline: none; }
 
-@-webkit-keyframes appearance {
-  0% { }
+@font-face {
+  font-family: 'ProximaNova';
+  src: url(../fonts/proximanova-regular.otf);
+  font-weight: normal; }
+
+@font-face {
+  font-family: 'ProximaNova';
+  src: url(../fonts/proximanova-bold.otf);
+  font-weight: bold; }
+
+@keyframes splash-up {
+  0% {
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
   100% {
-    opacity: 1; } }
+    -webkit-transform: translate(-50%, -110%);
+    transform: translate(-50%, -110%); } }
 
 @keyframes appearance {
   0% { }
   100% {
     opacity: 1; } }
 
-* {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
-
-@-webkit-keyframes disappear {
+@keyframes disappear {
   0% { }
   100% {
     opacity: 0; } }
+
+.header {
+  background-color: #fff;
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-shadow: 0px 0px 85px 0px rgba(98, 103, 112, 0.15);
+  box-shadow: 0px 0px 85px 0px rgba(98, 103, 112, 0.15); }
+  .header__btn {
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+    background-color: transparent;
+    border: none;
+    line-height: 2em; }
+    .header__btn:hover {
+      -webkit-transition: all .3s ease;
+      -o-transition: all .3s ease;
+      transition: all .3s ease; }
+    .header__btn:focus {
+      outline: none; }
+    .header__btn img {
+      width: 40%; }
+  .header__title {
+    margin: 0;
+    font-size: 18px; }
+
+@font-face {
+  font-family: 'ProximaNova';
+  src: url(../fonts/proximanova-regular.otf);
+  font-weight: normal; }
+
+@font-face {
+  font-family: 'ProximaNova';
+  src: url(../fonts/proximanova-bold.otf);
+  font-weight: bold; }
+
+@keyframes splash-up {
+  0% {
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+  100% {
+    -webkit-transform: translate(-50%, -110%);
+    transform: translate(-50%, -110%); } }
+
+@keyframes appearance {
+  0% { }
+  100% {
+    opacity: 1; } }
 
 @keyframes disappear {
   0% { }
   100% {
     opacity: 0; } }
+
+.account {
+  opacity: 0;
+  background-color: #f4f6f6;
+  height: 100vh;
+  overflow: hidden; }
+  .account__card {
+    padding: 8% 4%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+  .account__title {
+    font-size: 1.3em;
+    margin: 0; }
+  .account__cnumber {
+    color: #8fa3aa;
+    font-size: .5em;
+    font-weight: normal; }
+  .account__btn {
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+    background-color: transparent;
+    border: none; }
+    .account__btn:hover {
+      -webkit-transition: all .3s ease;
+      -o-transition: all .3s ease;
+      transition: all .3s ease; }
+    .account__btn:focus {
+      outline: none; }
+    .account__btn img {
+      width: 40%; }
+    .account__btn--small {
+      padding: 15px 5px; }
+    .account__btn--big {
+      background-color: #fff;
+      width: 50%;
+      padding: 20px 0;
+      color: #8fa3aa; }
+      .account__btn--big:hover, .account__btn--big:active {
+        color: #fff;
+        background: #2ad39b;
+        background: -webkit-gradient(linear, left top, right top, from(#aae238), to(#2ad39b));
+        background: -webkit-linear-gradient(left, #aae238 0%, #2ad39b 100%);
+        background: -o-linear-gradient(left, #aae238 0%, #2ad39b 100%);
+        background: linear-gradient(to right, #aae238 0%, #2ad39b 100%); }
+
+@font-face {
+  font-family: 'ProximaNova';
+  src: url(../fonts/proximanova-regular.otf);
+  font-weight: normal; }
+
+@font-face {
+  font-family: 'ProximaNova';
+  src: url(../fonts/proximanova-bold.otf);
+  font-weight: bold; }
+
+@keyframes splash-up {
+  0% {
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+  100% {
+    -webkit-transform: translate(-50%, -110%);
+    transform: translate(-50%, -110%); } }
+
+@keyframes appearance {
+  0% { }
+  100% {
+    opacity: 1; } }
+
+@keyframes disappear {
+  0% { }
+  100% {
+    opacity: 0; } }
+
+.service {
+  background-color: #fff;
+  padding: 4% 5%;
+  margin: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+  .service__title {
+    font-size: 1.3em;
+    margin: 0; }
+  .service__info {
+    color: #8fa3aa;
+    font-size: .5em;
+    font-weight: normal; }
+  .service__price {
+    font-size: .8em; }
+    .service__price:after {
+      content: "$"; }
+    .service__price--expense {
+      color: #f66e39; }
+      .service__price--expense:before {
+        content: "-"; }
+    .service__price--income {
+      color: #40d58b; }
+      .service__price--income:before {
+        content: "+"; }
+
+body {
+  font-family: 'ProximaNova', Arial, sans-serif; }
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
