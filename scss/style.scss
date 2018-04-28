@@ -1,10 +1,13 @@
 @import "variables.scss";
 @import "_transfer.scss";
 @import "_splash.scss";
+@import "_pin.scss";
 
 body {
 
 }
 
+* {
+	box-sizing: border-box;
 
-
+}

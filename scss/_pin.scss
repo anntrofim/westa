@@ -1,0 +1,52 @@
+@import "variables.scss";
+
+.pin {
+	height: 0;
+	position: relative;
+	color: #fff;
+	opacity: 0;
+	animation: appearance 2s 1;
+	animation-fill-mode: forwards;
+	animation-delay: 2s;
+
+	&__inner {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+		padding: 50px;
+
+	}
+
+	&__txt {
+		margin-bottom: 30px;
+
+	}
+
+	&__inp {
+		width: 18rem;
+	}
+
+	&__btn {
+		background-color: transparent;
+		border-radius: 10px;
+		border: 1px solid;
+		padding: 20px 70px;
+		margin-top: 90px;
+	}
+
+
+
+}
+
+
+@keyframes appearance {
+	0%{}
+	100% {
+		opacity: 1;
+	}
+}
