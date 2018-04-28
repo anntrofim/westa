@@ -162,3 +162,13 @@
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
+
+@-webkit-keyframes disappear {
+  0% { }
+  100% {
+    opacity: 0; } }
+
+@keyframes disappear {
+  0% { }
+  100% {
+    opacity: 0; } }

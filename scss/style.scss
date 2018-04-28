@@ -11,3 +11,14 @@ body {
 	box-sizing: border-box;
 
 }
+
+
+@keyframes disappear{
+	0% {}
+	100% {
+		opacity: 0;
+	}
+	// 100% {
+	// 	display: none;
+	// }
+}

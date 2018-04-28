@@ -1,10 +1,17 @@
 window.onload = function(){
 
-  function ready() {
-	login.style.display="none";
-  }
+	function makeInvisible() {
+		login.style.animation = "disappear 1s 1";
+		login.style.animationFillMode = "forwards";
+		setTimeout(notDisplay, 1000);
+	}
 
-  var login = document.getElementById("login");
-  var loginBtn = document.getElementById("loginBtn");
-  loginBtn.addEventListener("click", ready);
+	function notDisplay() {
+		login.style.display="none";
+	}
+
+
+	var login = document.getElementById("login");
+	var loginBtn = document.getElementById("loginBtn");
+	loginBtn.addEventListener("click", makeInvisible);
 }();
