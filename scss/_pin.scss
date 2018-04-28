@@ -12,18 +12,21 @@
 	&__inner {
 		position: absolute;
 		bottom: 0;
+		height: 45vh;
 		width: 100%;
 
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: space-around;
-		padding: 50px;
-
+		// padding: 50px;
+@media (orientation: landscape){
+height: 100vh;
+}
 	}
 
 	&__txt {
-		margin-bottom: 30px;
+		margin: 0;
 
 	}
 
@@ -32,11 +35,13 @@
 	}
 
 	&__btn {
+		@include btn;
 		background-color: transparent;
 		border-radius: 10px;
 		border: 1px solid;
 		padding: 20px 70px;
-		margin-top: 90px;
+		margin-top: 10px;
+		margin-bottom: 20px;
 	}
 
 

@@ -111,6 +111,7 @@
   .pin__inner {
     position: absolute;
     bottom: 0;
+    height: 45vh;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -123,18 +124,30 @@
     -ms-flex-align: center;
     align-items: center;
     -ms-flex-pack: distribute;
-    justify-content: space-around;
-    padding: 50px; }
+    justify-content: space-around; }
+    @media (orientation: landscape) {
+      .pin__inner {
+        height: 100vh; } }
   .pin__txt {
-    margin-bottom: 30px; }
+    margin: 0; }
   .pin__inp {
     width: 18rem; }
   .pin__btn {
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
     background-color: transparent;
     border-radius: 10px;
     border: 1px solid;
     padding: 20px 70px;
-    margin-top: 90px; }
+    margin-top: 10px;
+    margin-bottom: 20px; }
+    .pin__btn:hover {
+      -webkit-transition: all .3s ease;
+      -o-transition: all .3s ease;
+      transition: all .3s ease; }
+    .pin__btn:focus {
+      outline: none; }
 
 @-webkit-keyframes appearance {
   0% { }
