@@ -14,7 +14,5 @@
  * TODO: Should be moved to the desktop version and redirect to mobile when needed.
  */
  if (window.mobilecheck()) {
- 	window.location = "https://anntrofim.github.io/westa/";
- } else {
- 	window.location = "http://google.com";
+ 	// redirection to mobile: window.location = "https://anntrofim.github.io/westa/";
  }
