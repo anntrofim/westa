@@ -1,0 +1,40 @@
+@import "variables.scss";
+
+body {
+
+}
+
+.header {
+	background-color: #ddd;
+	padding: 25px;
+	display: flex;
+	justify-content: space-between;
+
+	& img {
+		border: 1px solid #eee;
+
+	}
+
+	&__title {
+
+	}
+
+}
+
+.main {
+	padding: 0;
+}
+
+
+.info {
+
+	background: #aae238;
+	background: linear-gradient(to right, #aae238 0%,#2ad39b 100%);
+
+
+}
+
+
+.number {
+
+}
