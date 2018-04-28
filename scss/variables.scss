@@ -1,0 +1,37 @@
+
+
+// @font-face {
+// 	font-family: 'Aleo';
+// 	src: url(../fonts/AleoRegular.otf);
+// 	font-weight: normal;
+// }
+
+@mixin transition {
+	transition: all .3s ease;
+}
+
+@mixin btn {
+
+	@include transition;
+
+	&:hover {
+
+		@include transition;
+	}
+	&:focus {
+		outline:none;
+	}
+	&:active {
+
+	}
+}
+
+@mixin ref {
+	text-decoration: none;
+	@include transition;
+
+	&:hover {
+		text-decoration: none;
+		@include transition;
+	}
+}
