@@ -17,18 +17,22 @@ window.onload = function () {
 	var login = document.getElementById("login");
 	var loginBtn = document.getElementById("loginBtn");
 
+	var accountPath = '../html/account.html';
+
 	function changeScreen() {
 		login.style.animation = "disappear 1s 1";
 		setTimeout(function() {
 			hideElement(login);
-		}, 1000);
-		setTimeout(function() {
-			window.location.href = '../html/account.html';
+			goToPage(accountPath);
 		}, 1000);
 	}
 
 	function hideElement(element) {
 		element.style.display = "none";
+	}
+
+	function goToPage(path) {
+		window.location.href = path;
 	}
 
 	loginBtn.addEventListener("click", changeScreen);
