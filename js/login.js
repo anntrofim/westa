@@ -1,39 +1,35 @@
-window.onload = function(){
+window.onload = function () {
+	// -------> CHANGING FOCUS AFTER INPUT
 
-// -------> CHANGING FOCUS AFTER INPUT
+	// var inp = document.getElementsByClassName("pin__inp");
 
-// var inp = document.getElementsByClassName("pin__inp");
+	// function changeFocus() {
+	// 	for (var i = 0; i < inp.length; ++i) {
+	// 		inp[i].blur();
+	// 		inp[++i].focus();
+	// 	}
+	// }
 
-// function changeFocus() {
-// 	for (var i = 0; i < inp.length; ++i) {
-// 		inp[i].blur();
-// 		inp[++i].focus();
-// 	}
-// }
+	// inp.addEventListener("input", changeFocus());
 
-// inp.addEventListener("input", changeFocus());
+	// -------> LOGIN BLOCK DISAPPEARANCE
 
-// -------> LOGIN BLOCK DISAPPEARANCE
+	var login = document.getElementById("login");
+	var loginBtn = document.getElementById("loginBtn");
 
-var login = document.getElementById("login");
-var loginBtn = document.getElementById("loginBtn");
-var account = document.getElementById("account");
+	function changeScreen() {
+		login.style.animation = "disappear 1s 1";
+		setTimeout(function() {
+			hideElement(login);
+		}, 1000);
+		setTimeout(function() {
+			window.location.href = '../html/account.html';
+		}, 1000);
+	}
 
-function notDisplay() {
-	login.style.display="none";
-}
+	function hideElement(element) {
+		element.style.display = "none";
+	}
 
-function changeOpacity() {
-	account.style.opacity = "1";
-}
-
-function changeScreen() {
-	login.style.animation = "disappear 1s 1";
-	setTimeout(notDisplay, 1000);
-	account.style.animation = "appearance 2s 1";
-	account.style.animationDelay = "1s";
-	setTimeout(changeOpacity, 3000);
-}
-
-loginBtn.addEventListener("click", changeScreen);
+	loginBtn.addEventListener("click", changeScreen);
 }();
