@@ -11,7 +11,7 @@ window.onload = function () {
 	var login = document.getElementById("login");
 	var loginBtn = document.getElementById("loginBtn");
 
-	var accountPath = "../html/account.html";
+	var accountPath = "/html/account.html";
 
 	function changeScreen() {
 		login.style.animation = "disappear 1s 1";
